@@ -17,7 +17,7 @@ with ZipFile('htmlreports.zip', 'w') as zipObj:
                 fname = os.path.join(root, filename)
                 print('Filename: {}'.format(fname))
                 filelist.append(fname)
-                zipObj.write(fname)
+                zipObj.write(filename)
                 #files.append(open(fname, 'rb'))
         break
 zipObj.close()

@@ -22,7 +22,6 @@ with ZipFile('htmlreports.zip', 'w') as zipObj:
         break
 zipObj.close()
 files = [ ('file', ('htmlreports.zip', open('htmlreports.zip','rb'), 'application/zip')) ]
-1:35
 r = requests.post("https://jira.jnj.com/rest/api/latest/issue/AFHS-2453/attachments", auth=credentials, files=files, headers=headers)
 print(files)
 #r = requests.post("https://medband.atlassian.net/rest/api/latest/issue/GA-5/attachments", auth=credentials, files=files, headers=headers)
